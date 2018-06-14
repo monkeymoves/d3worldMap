@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>D3 Map</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <svg
+    version="1.1"
+    baseProfile="full"
+    xmlns="http://www.w3.org/2000/svg"
+    id="map">
+  </svg>
+  <select>
+    <option value="population">Population</option>
+    <option value="populationDensity">Population Density</option>
+    <option value="medianAge">Median Age</option>
+    <option value="fertilityRate">Fertility Rate</option>
+  </select>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://unpkg.com/topojson@3"></script>
+  <script src="app.js"></script>
+</body>
+</html>
