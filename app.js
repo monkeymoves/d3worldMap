@@ -69,15 +69,36 @@ d3.select("svg")
 
       d3.selectAll(".country")
           .transition()
-          .duration(750)
+          .duration(600)
           .ease(d3.easeBackIn)
           .attr("fill", d => {
             var data = d.properties[val];
             return data ? scale(data) : "#ccc";
           });
+
+          var svg = d3.select("svg");
+
+svg.append("g")
+  .attr("class", "legendQuant")
+  .attr("transform", "translate(800, 60)");
+
+
+   var legend = d3.legendColor()
+      .labelFormat(d3.format(".2f"))
+      .title("")
+      .titleWidth(100)
+      .scale(scale)
+      d3.selectAll("select")
+      .style("color", "colorRanges[val]" )
+
+svg.select(".legendQuant")
+  .call(legend);
     }
+
+
   });
 
+  
 
 
 

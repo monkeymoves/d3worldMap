@@ -1,9 +1,89 @@
-svg, select {
-    margin: 0 auto;
-    display: block;
-  }
+
+mapTitle { 
+
+  text-align: center;
+
+}
+h3 {
+  text-align: center;
+  color: purple;
+}
+
+p {
+  width: 200px;
+  z-index:10;
+}
+/* div {
+position: relative; 
+   } */
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+select{
+  border: 1px solid rgb(68, 68, 68);
+  margin-top: -15px;
+  margin-bottom: 40px;
+  margin-right: 40px;
+  margin-left: 800px;
+  background-color: "green";  display: block;
+  position: relative;
+  z-index:10;
+
+
+}
+
+rect.swatch {
+  stroke: rgb(150, 150, 150);
+}
+/* svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
   
+  p {
+    width: 200px;
+    z-index:10;
+}
+
+  div {
+        position: relative;
+        
+        } */
+
   path {
     stroke: #ccc;
     stroke-width: 0.25px;
   }
+
+  body {
+    font: 10px sans-serif;
+  }
+  
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  
+  .x.axis path {
+    display: none;
+  }
+  
+  .line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+  
+  /* .legend rect {
+    fill:white;
+    stroke:black;
+    opacity:0.8;} */

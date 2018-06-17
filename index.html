@@ -11,21 +11,54 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
+
 <body>
-  <svg
-    version="1.1"
-    baseProfile="full"
-    xmlns="http://www.w3.org/2000/svg"
-    id="map">
-  </svg>
-  <select>
-    <option value="population">Population</option>
-    <option value="populationDensity">Population Density</option>
-    <option value="medianAge">Median Age</option>
-    <option value="fertilityRate">Fertility Rate</option>
-  </select>
-  <script src="https://d3js.org/d3.v4.js"></script>
-  <script src="https://unpkg.com/topojson@3"></script>
+
+  <div class"container mapTitle">
+    <h3> D3 World Data Interactive</h3>
+    <select class="selectDrop" id= "activitySelector" onchange="myFunction()" style="color: purple">
+      <option  value="population">Population</option>
+      <option  value="populationDensity">Population Density</option>
+      <option  value="medianAge">Median Age</option>
+      <option  value="fertilityRate">Fertility Rate</option>
+    </select>
+  </div>
+  
+    <div class="container">
+        
+      <svg   version="1.1"   baseProfile="full"   xmlns="http://www.w3.org/2000/svg"   id="map"> </svg>
+   
+    </div>
+
+    <script> 
+    function myFunction(){
+      var selectDropDown = document.getElementById("activitySelector");
+      var tmap = document.getElementsByClassName("mapTitle");
+
+      if (selectDropDown.value == "populationDensity"){
+          selectDropDown.setAttribute("style", "background-color: pink;");
+      }
+      if (selectDropDown.value == "fertilityRate"){
+          selectDropDown.setAttribute("style", "background-color: orange;");
+
+      }
+      if (selectDropDown.value == "medianAge"){
+          selectDropDown.setAttribute("style", "background-color: darkgrey;");
+
+      } 
+      if (selectDropDown.value == "population"){
+          selectDropDown.setAttribute("style", "background-color: rgb(177, 156, 217);");
+
+      } 
+    }
+    </script>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js></script>
+ 
+<script src="https://unpkg.com/topojson@3"></script>
   <script src="app.js"></script>
+  <script src="d3.legend.js"></script>
+
 </body>
 </html>
