@@ -2,11 +2,18 @@
 mapTitle { 
 
   text-align: center;
+  background-color: rgb(214, 212, 212)
 
 }
 h3 {
   text-align: center;
   color: purple;
+  z-index: 10;
+  position: relative; 
+  text-shadow: 1px 1px 3px rgb(184, 184, 184);
+
+  
+
 }
 
 p {
